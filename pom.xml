@@ -6,7 +6,7 @@
     <groupId>org.bf2</groupId>
     <artifactId>cos-fleet-catalog-camel-parent</artifactId>
     <packaging>pom</packaging>
-    <version>999-SNAPSHOT</version>
+    <version>999-productizationtest</version>
 
     <properties>
         <encoding>UTF-8</encoding>
@@ -230,74 +230,74 @@
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-serdes</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-jsonpath</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-kafka</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
 
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-fault</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-log</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
 
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-aws</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-azure</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-ansible-tower</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-salesforce</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-mongodb</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-slack</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-http</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-google</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-sql</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
 
             <dependency>
@@ -309,7 +309,7 @@
             <dependency>
                 <groupId>org.bf2</groupId>
                 <artifactId>cos-connector-camel-component-routecontroller</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>0.0.1-productizationtest</version>
             </dependency>
 
             <!-- deps -->

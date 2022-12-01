@@ -11,7 +11,7 @@
     "supportLevel": "Preview",
     "groupId": "org.bf2",
     "artifactId": "cos-connector-camel-component-routecontroller",
-    "version": "0.0.1-SNAPSHOT",
+    "version": "0.0.1-productizationtest",
     "scheme": "rc",
     "extendsScheme": "",
     "syntax": "rc:action",
