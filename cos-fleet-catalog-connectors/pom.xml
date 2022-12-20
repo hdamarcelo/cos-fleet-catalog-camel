@@ -23,7 +23,7 @@
         <quarkus.container-image.push>false</quarkus.container-image.push>
 
         <quarkus.jib.base-jvm-image>${cos.base.container.image}</quarkus.jib.base-jvm-image>
-        <quarkus.jib.jvm-arguments>-XX:+UseShenandoahGC,-Djava.util.logging.manager=org.jboss.logmanager.LogManager</quarkus.jib.jvm-arguments>
+        <!-- <quarkus.jib.jvm-arguments>-XX:+UseShenandoahGC,-Djava.util.logging.manager=org.jboss.logmanager.LogManager</quarkus.jib.jvm-arguments> -->
 
         <cos.catalog.validation.mode>FAIL</cos.catalog.validation.mode>
         <cos.catalog.name>connector-catalog-camel-${cos.connector.catalog.group}</cos.catalog.name>
@@ -32,7 +32,7 @@
     <dependencies>
         <dependency>
             <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-container-image-jib</artifactId>
+            <artifactId>quarkus-container-image-docker</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -334,6 +334,7 @@
             </activation>
             <properties>
                 <quarkus.container-image.build>true</quarkus.container-image.build>
+                <quarkus.docker.dockerfile-jvm-path>${maven.multiModuleProjectDirectory}/etc/Dockerfile.jvm</quarkus.docker.dockerfile-jvm-path>
             </properties>
             <build>
                 <pluginManagement>
@@ -361,6 +362,7 @@
             </activation>
             <properties>
                 <quarkus.container-image.push>true</quarkus.container-image.push>
+                <quarkus.docker.dockerfile-jvm-path>${maven.multiModuleProjectDirectory}/etc/Dockerfile.jvm</quarkus.docker.dockerfile-jvm-path>
             </properties>
             <build>
                 <pluginManagement>
@@ -382,14 +384,13 @@
             </build>
         </profile>
         <profile>
-            <id>fat-jar</id>
+            <id>dist</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
             <properties>
                 <quarkus.container-image.build>false</quarkus.container-image.build>
-                <quarkus.package.type>uber-jar</quarkus.package.type>
-                <quarkus.package.output-name>connector</quarkus.package.output-name>
+                <quarkus.container-image.push>false</quarkus.container-image.push>
             </properties>
             <build>
                 <pluginManagement>
@@ -403,6 +404,24 @@
                                     <goals>
                                         <goal>generate-app</goal>
                                     </goals>
+                                </execution>
+                            </executions>
+                        </plugin>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-assembly-plugin</artifactId>
+                            <executions>
+                                <execution>
+                                    <phase>package</phase>
+                                    <goals>
+                                        <goal>single</goal>
+                                    </goals>
+                                    <configuration>
+                                        <appendAssemblyId>true</appendAssemblyId>
+                                        <descriptors>
+                                            <descriptor>${maven.multiModuleProjectDirectory}/etc/distribution.xml</descriptor>
+                                        </descriptors>
+                                    </configuration>
                                 </execution>
                             </executions>
                         </plugin>
